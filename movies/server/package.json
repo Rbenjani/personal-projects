@@ -1,9 +1,13 @@
 {
-    "name": "Movies",
+    "name": "movies",
     "version": "0.0.1",
+    "scripts": {
+        "start": "node server.js"
+    },
     "dependencies": {
         "body-parser": "^1.18.3",
-        "express": "^4.16.3"
+        "express": "^4.16.3",
+        "mongoose": "^5.2.1"
     },
     "devDependencies": {}
 }
