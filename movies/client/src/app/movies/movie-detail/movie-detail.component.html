@@ -1,3 +1,11 @@
-<p>
-  movie-detail works!
-</p>
+<ng-container *ngIf="movie">
+    <a [routerLink]="['/edit-movie', movie.id]">Editar datos</a>
+    <img src="../uploads/{{movie.id}}.jpg" alt="Poster">
+    <h3>{{movie.title}}</h3>
+    <div>
+        <form #editPoster="ngForm" (ngSubmit)="savePoster(editPoster)" enctype="multipart/form-data" novalidate>
+            <input type="file" (change)="fileChange($event)" name="poster">
+            <button type="submit">Subir</button>
+        </form>
+    </div>
+</ng-container>

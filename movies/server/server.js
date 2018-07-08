@@ -17,6 +17,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 // Point static path to dist generate from Angular 
 app.use(express.static(path.join(__dirname, '../client/dist')));
+app.use(express.static(path.join(__dirname, '../uploads')));
 
 // Catch api calls
 app.use('/api', api);

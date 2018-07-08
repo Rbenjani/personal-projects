@@ -1,5 +1,6 @@
+<a [routerLink]="['/new-movie']">Añadir película</a>
 <ul>
   <li *ngFor="let movie of movieService.lastMovies">
-    {{movie.title}} ({{movie.year}})
+    <a [routerLink]="['/movie/', movie.id]">{{movie.title}} ({{movie.year}})</a>
   </li>
 </ul>

@@ -7,7 +7,8 @@ var movieSchema = new Schema({
     originalTitle: String,
     runtime: Number,
     year: Number,
-    addDate: {type: Date, default: Date.now}
+    addDate: {type: Date, default: Date.now},
+    poster: String
 });
 
 // Export function to create "Movie" model class

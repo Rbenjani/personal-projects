@@ -1,3 +1,20 @@
-<p>
-  new-movie works!
-</p>
+<form [formGroup]="newMovieForm" (ngSubmit)="onSubmit()">
+  <div class="form-field">
+    <label for="title">Título:</label>
+    <input type="text" formControlName="title" id="title">
+  </div>
+  <div class="form-field">
+    <label for="originalTitle">Título original:</label>
+    <input type="text" formControlName="originalTitle" id="originalTitle">
+  </div>
+  <div class="form-field">
+    <label for="runtime">Duración:</label>
+    <input type="number" formControlName="runtime" id="runtime"> min.
+  </div>
+  <div class="form-field">
+    <label for="year">Año:</label>
+    <input type="text" formControlName="year" id="year">
+  </div>
+
+  <button type="submit">Añadir película</button>
+</form>
