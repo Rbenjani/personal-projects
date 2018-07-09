@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+/* Reseteo */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Hacemos fz a 62.5% para que 1 rem = 10px  */
+html {
+  font-size: 62.5%;
+}

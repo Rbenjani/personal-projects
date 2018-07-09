@@ -4,7 +4,7 @@ const multer = require('multer');
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, 'uploads/')
+        cb(null, '../client/src/assets/img/poster/')
     },
     filename: function (req, file, cb) {        
         cb(null, req.body.id + '.jpg') //Appending .jpg

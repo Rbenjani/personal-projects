@@ -1,11 +1,26 @@
 <ng-container *ngIf="movie">
-    <a [routerLink]="['/edit-movie', movie.id]">Editar datos</a>
-    <img src="../uploads/{{movie.id}}.jpg" alt="Poster">
-    <h3>{{movie.title}}</h3>
-    <div>
-        <form #editPoster="ngForm" (ngSubmit)="savePoster(editPoster)" enctype="multipart/form-data" novalidate>
-            <input type="file" (change)="fileChange($event)" name="poster">
-            <button type="submit">Subir</button>
-        </form>
+    <ul class="header-actions">
+        <li>
+            <a [routerLink]="['/edit-movie', movie.id]">Editar datos</a>
+        </li>
+        <li>
+            <p>Cambiar poster:
+                <input type="file" (change)="fileChange($event)" name="poster">
+            </p>
+        </li>
+    </ul>
+
+    <div class="row">
+        <div class="movie-poster">
+            <img src="assets/img/poster/{{movie.id}}.jpg" alt="Poster">
+        </div>
+        <div class="movie-general-data">
+            <h3>{{movie.title}} <span>({{movie.originalTitle}})</span></h3>
+            
+        </div>
+        <div class="movie-ratings">
+            FA: 5
+        </div>
     </div>
+
 </ng-container>
