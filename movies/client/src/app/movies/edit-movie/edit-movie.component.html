@@ -1,0 +1,11 @@
+<ng-container *ngIf="movie">
+  <!-- TODO: poner imagen de fondo que complemente el espacio libre dejado por el form -->
+  <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+    
+    <input type="text" formControlName="title">
+    <input type="text" formControlName="originalTitle">
+    <input type="text" formControlName="runtime">
+    <input type="text" formControlName="year">
+    <button type="submit">Actualizar datos</button>
+  </form>
+</ng-container>

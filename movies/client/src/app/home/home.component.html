@@ -1,6 +1,20 @@
-<a [routerLink]="['/new-movie']">Añadir película</a>
-<ul>
-  <li *ngFor="let movie of movieService.lastMovies">
-    <a [routerLink]="['/movie/', movie.id]">{{movie.title}} ({{movie.year}})</a>
-  </li>
-</ul>
+<section class="last-added-section">
+  <h3>Últimas películas añadidas a la BD</h3>
+  <ul>
+    <li *ngFor="let movie of movieService.lastMovies">
+      <a [routerLink]="['/movie/', movie.id]">
+        <img src="assets/img/poster/{{movie.id}}.jpg" alt="Poster de {{movie.title}}">
+        <div class="info-movie">
+          <div class="title-year-movie">
+            <span class="title-movie">{{movie.title}}</span>
+            <span class="year-movie">({{movie.year}})</span>
+          </div>
+        </div>
+      </a>
+    </li>
+  </ul>
+</section>
+
+<section class="last-rated-section">
+  <h3>Últimas películas votadas</h3>
+</section>

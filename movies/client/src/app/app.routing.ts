@@ -1,3 +1,4 @@
+import { EditMovieComponent } from './movies/edit-movie/edit-movie.component';
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { HomeComponent } from './home/home.component';
@@ -18,6 +19,10 @@ const routes: Routes = [
     {
         path: 'new-movie',
         component: NewMovieComponent
+    },
+    {
+        path: 'edit-movie/:id',
+        component: EditMovieComponent
     },
     {
         path: 'movie/:id',

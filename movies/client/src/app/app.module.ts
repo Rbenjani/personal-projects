@@ -10,6 +10,9 @@ import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app.routing';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { NewMovieComponent } from './movies/new-movie/new-movie.component';
+import { HeaderComponent } from './header/header.component';
+import { EditMovieComponent } from './movies/edit-movie/edit-movie.component';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { NewMovieComponent } from './movies/new-movie/new-movie.component';
     MovieListComponent,
     NewMovieComponent,
     HomeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    HeaderComponent,
+    EditMovieComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,

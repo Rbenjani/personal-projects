@@ -1,0 +1,21 @@
+@import "../../variables.scss";
+
+.header-container {
+    display: flex;
+    background-color: $dark-green-1;
+    padding: 2rem;
+
+    & > * {
+        display: inline-block;
+        margin: 0 1rem;
+    }
+
+    & > .header__filter {
+        flex: 1;
+
+        & input {
+            height: 3rem;
+            width: 100%;
+        }
+    }
+}
